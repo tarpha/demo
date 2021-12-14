@@ -6,6 +6,5 @@ RUN gradle bootjar
 
 FROM adoptopenjdk:11-openj9-focal
 COPY --from=0 /demo/build/libs/demo-*.jar demo.jar
-VOLUME [ "/root/data" ]
 EXPOSE 8080
 CMD [ "java", "-Xshareclasses", "-Xquickstart", "-jar", "demo.jar"]
