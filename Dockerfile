@@ -1,4 +1,4 @@
-FROM gradle:jdk11
+FROM gradle:7.6-jdk11
 RUN mkdir /demo
 WORKDIR /demo
 COPY . /demo
